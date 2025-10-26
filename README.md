@@ -127,13 +127,6 @@ Access the application at `http://127.0.0.1:8000/`.
 
 2. Access the app at `http://localhost/`.
 
-### Production Deployment (Recommended: Render.com)
-
-1. Push your project to GitHub.
-2. Log in to [Render.com](https://render.com).
-3. Create a **new web service** and connect your GitHub repository.
-4. Choose **Docker** as the environment.
-5. Set environment variables (if any) and deploy.
 
 ## Environment Variables
 
@@ -152,19 +145,6 @@ To run the test suite:
 python manage.py test
 ```
 
-## Contributing
-
-Contributions are welcome. Please fork the repository and submit a pull request with a clear description of your changes.
-
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m "Add feature"`).
-4. Push to the branch (`git push origin feature-name`).
-5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
