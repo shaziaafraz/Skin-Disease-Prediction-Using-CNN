@@ -8,6 +8,9 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /app
 
+# Set Python path
+ENV PYTHONPATH=/app
+
 # Install system dependencies
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -40,4 +43,4 @@ USER app
 EXPOSE 8000
 
 # Run the application
-CMD ["gunicorn", "--pythonpath", "/app", "--bind", "0.0.0.0:8000", "SkinDisease.wsgi:application"]
+CMD ["gunicorn", "--chdir", "/app", "--bind", "0.0.0.0:8000", "SkinDisease.wsgi:application"]
