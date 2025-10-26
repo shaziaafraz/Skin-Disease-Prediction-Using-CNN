@@ -34,6 +34,9 @@ RUN pip install --upgrade pip \
 # Copy project
 COPY . .
 
+# Make start script executable
+RUN chmod +x start.sh
+
 # Create non-root user
 RUN useradd --create-home --shell /bin/bash app \
     && chown -R app:app /app
@@ -43,4 +46,4 @@ USER app
 EXPOSE 8000
 
 # Run the application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["./start.sh"]
