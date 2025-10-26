@@ -35,7 +35,7 @@ RUN pip install --upgrade pip \
 COPY . .
 
 # Make start script executable
-RUN chmod +x start.sh
+RUN chmod +x /app/start.sh
 
 # Create non-root user
 RUN useradd --create-home --shell /bin/bash app \
